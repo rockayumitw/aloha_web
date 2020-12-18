@@ -1,0 +1,46 @@
+// rwd: 最小寬度
+// example: @include media-max(md){}
+@mixin media-max($breakpoint) {
+    @if map-has-key($grid-breakpoints, $breakpoint) {
+      @media (max-width: map-get($grid-breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+  }
+  
+  // rwd: 最大寬度
+  // example: @include media-min(md){}
+  @mixin media-min($breakpoint) {
+    @if map-has-key($grid-breakpoints, $breakpoint) {
+      @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+  }
+
+
+  // font-size
+  // text-lg-xs
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @each $size, $value in $font-size {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        .text#{$infix}-#{$size} {
+         font-size: $value;
+        }
+      } 
+    }
+  }
+
+  // line-height
+  // lh-lg-xs
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @each $size, $value in $font-line-Height {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        .lh#{$infix}-#{$size} {
+         line-height: $value;
+        }
+      } 
+    }
+  }

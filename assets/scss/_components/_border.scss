@@ -1,0 +1,23 @@
+$border-width : 2px;
+$border-radius-lg: 8px;
+
+@each $color, $value in $theme-colors {
+    .border-#{$color} {
+      border-color: $value !important;
+      border-style: solid;
+    }
+}
+
+.border-width{
+    border-width : $border-width !important;
+}
+
+.border-right-radius{
+  border-top-right-radius: $border-radius-sm !important;
+  border-bottom-right-radius: $border-radius-sm !important;
+}
+
+.broder-left-radius{
+  border-top-left-radius: $border-radius-sm;
+  border-bottom-left-radius: $border-radius-sm;
+}

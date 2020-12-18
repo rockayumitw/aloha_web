@@ -1,0 +1,41 @@
+
+.search-page{
+    .card-image-box {
+        max-height: 175px;
+        @include media-max(md){
+            min-height: 150px;
+            max-height: 150px;
+            img{
+                transform: scale(1.5);
+            }
+        }
+    } 
+    .search-item {
+        padding: 24px 0 24px 0;
+        &:nth-child(1){
+            padding-top: 0px !important;
+        }
+        &:last-child{
+            border-bottom: 0px;
+        }
+        @include media-max(md){
+            padding: 16px 0;
+        }
+        @include media-max(xs){
+            padding: 0px;
+        }
+        border-bottom: 4px solid $secondary;
+        
+        .search-item-rating{
+            justify-content: flex-end;
+            @include media-max(xs){
+                justify-content: start;
+            }
+        }
+        .search-item-price{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+}

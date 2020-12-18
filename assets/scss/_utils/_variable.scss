@@ -1,0 +1,250 @@
+// container -寬度設定
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1140px
+);
+
+
+// 字體,陰影
+$font-family: "Roboto", sans-serif;
+$shadow: rgba(0,40,62,0.5);
+
+// them-語系
+// example: them-TW | them-EN
+// $them-lang:'TW','JP','EN','CN','KO';
+$paragraph-margin-bottom:  0;
+
+// font-size設定
+
+$font-size-base: 10px;
+$font-size: () !default;
+$font-size: map-merge(
+  (
+    base: $font-size-base,          // 10  base 
+    xxs: ($font-size-base * 1.2),   // 12 *1.2 xxs
+    xs:  ($font-size-base * 1.4),   // 14 *1.4 xs
+    sm:  ($font-size-base * 1.6),   // 16 *1.6 sm
+    md:  ($font-size-base * 2),     // 20 *2   md
+    lg:  ($font-size-base * 2.4),   // 24 *2.4 lg
+    xl:  ($font-size-base * 3.2),   // 32 *3.2 xl
+    2xl: ($font-size-base * 4.8),   // 48 *4.8 2xl
+  ),
+  $font-size
+);
+
+$h1-font-size:  $font-size-base * 4.8;    // -無使用
+$h2-font-size:  $font-size-base * 4.8;    // 48
+$h3-font-size:  $font-size-base * 3.2;    // 32
+$h4-font-size:  $font-size-base * 2.4;    // 24
+$h5-font-size:  $font-size-base * 2;      // 20
+$h6-font-size:  $font-size-base * 1.6;    // 16
+$headings-margin-bottom:  0;
+
+// line-height:行高設定 
+$font-line-Height-base: 12px;             // 12
+$font-line-Height: () !default;
+$font-line-Height: map-merge(
+  (
+    base: $font-line-Height-base,         // 12
+    xxs: ($font-line-Height-base * 1.5),  // 18 *1.5 xxs
+    xs: ($font-line-Height-base * 1.75),  // 21 *1.75 xs
+    sm: ($font-line-Height-base * 2),     // 24 *2 sm
+    md: ($font-line-Height-base * 2.5),   // 30 *2.5 md
+    lg :($font-line-Height-base * 3),     // 36 *3 lg
+    xl: ($font-line-Height-base * 4),     // 48 *4 xl
+    2xl: ($font-line-Height-base * 5.33), // 64 *5.33 2xl
+  ),
+  $font-line-Height
+);
+
+// 
+
+// color
+$white: #fff;
+$gray-100: #FFFFFF98; // ffffff98
+$gray-200: #9E9E9E;   // 00000061
+$gray-300: #666666;   // 0000009a   
+$gray-400: #212121;   // 000000de
+$gray-500: #121212;   
+$black: #000;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500
+  ),
+  $grays
+);
+
+$primary :#6C51E2;
+$secondary: #F1F0F8;
+$info:#818A91;
+$success: $green;
+$warning: $yellow;
+$danger: $danger;
+$light: $gray-100;
+$dark: $gray-500;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "white":      $white,
+    "black":      $black,
+    "dark":       $dark,
+    "gray-100":   $gray-100,
+    "gray-200":   $gray-200,
+    "gray-300":   $gray-300,
+    "gray-400":   $gray-400,
+    "gray-500":   $gray-500,
+    "gray-600":   $gray-600
+);
+
+$body-bg:     $white;
+// $body-color:  $gray-900;
+
+// link color
+$link-color: $gray-500;
+$link-hover-color: $primary;
+
+// spacer
+$spacer: 8px ;
+$spacers: () !default;
+$spacers: (
+  0: 0,                     
+  1: $spacer,             // 8
+  2: ($spacer * 1.25),    // 10    
+  3: ($spacer * 2),       // 16
+  4: ($spacer * 2.5),     // 20
+  5: ($spacer * 2.75),    // 22
+  6: ($spacer * 3),       // 24
+  7: ($spacer * 3.75),    // 30
+  8: ($spacer * 5),       // 40
+  9: ($spacer * 6),       // 48
+  10: ($spacer * 6.25),   // 50
+  11: ($spacer * 8.25),   // 66
+  12: ($spacer * 9),      // 72
+  13: ($spacer * 10.625), // 85
+  14: ($spacer * 11.5),   // 92
+  15: ($spacer * 16),     // 128
+);
+
+// w / h
+// $sizes: () !default;
+$sizes:(
+  10: 10%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+);
+
+// modal
+$modal-xl: 1140px !default;
+$modal-lg: 800px !default;
+$modal-md: 500px !default;
+$modal-sm: 300px !default;
+$modal-content-border-width: 0px;
+$modal-content-border-radius: 5px;
+
+// border
+$border-radius-sm: 4px;
+$border-radius-lg: 8px;
+$border-width:  1px !default;
+$border-color:  $primary !default;
+
+
+// z-index
+$z-index: (
+  loading: 1050,
+  card_text: 3,
+  card_linear_mask: 2,
+  card_image: 1,
+  header: 1
+);
+
+// for BV
+$grid-breakpoints:(
+    xxs: 319.98px, // ios se5
+    xs : 575.98px, 
+    sm : 767.98px,
+    md : 991.98px,
+    lg : 1199.98px,
+    xl : 1399.98px,
+);
+
+// 圖片路徑
+$pic-group:(
+  // 'carousel':'~assets/images/index1.jpg',
+  // 'pic-1':'~assets/images/index2.jpg',
+  // 'pic-2':'~assets/images/index3.png',
+  // 'pic-3':'~assets/images/index4.jpg',
+  // 'pic-4':'~assets/images/index5.jpg',
+  // 'pic-5':'~assets/images/index6.jpg',
+  // 'pic-6':'~assets/images/index7.jpg',
+  // 'pic-7':'~assets/images/index8.jpg',
+  // 'pic-8':'~assets/images/index9.jpg',
+  // 'subscription-background':'~assets/images/index10.jpg',
+  // 'pro-1':'~assets/images/products1.jpg',
+  // 'pro-7':'~assets/images/products7.jpg',
+  // 'pro-3':'~assets/images/products3.jpg',
+  // 'pro-4':'~assets/images/products4.jpg',
+  // 'pro-5':'~assets/images/products5.jpg',
+  // 'pro-8':'~assets/images/products8.jpg',
+  // 'pro-10':'~assets/images/products10.jpg',
+  // 'pro-11':'~assets/images/products11.jpg',
+  // 'pro-12':'~assets/images/products12.jpg',
+);
+
+
+// Pagination
+
+$pagination-padding-y:               8px;
+$pagination-padding-x:              14px;
+$pagination-padding-y-sm:           .25rem ;
+$pagination-padding-x-sm:           .5rem ;
+$pagination-padding-y-lg:           .75rem ;
+$pagination-padding-x-lg:           1.5rem ;
+$pagination-line-height:            1.25 ;
+
+$pagination-color:                  $link-color ;
+$pagination-bg:                     transparent ;
+$pagination-border-width:           0 ;
+$pagination-border-color:           $white ;
+
+$pagination-focus-box-shadow:       transparent ;
+$pagination-focus-outline:          0 ;
+
+$pagination-hover-color:            $white;
+$pagination-hover-bg:               $primary ;
+$pagination-hover-border-color:     transparent ;
+
+$pagination-active-color:           $black ;
+$pagination-active-bg:              $white ;
+$pagination-active-border-color:    $white ;
+
+$pagination-disabled-color:         $gray-600 ;
+$pagination-disabled-bg:            transparent ;
+$pagination-disabled-border-color:  $gray-300 ;
+
+
+
+// 動畫前綴
+$experimental-support-for-webkit: true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+

@@ -1,0 +1,113 @@
+// ------- 
+// 全站設定 
+// ------- 
+
+*{
+    outline: 0;
+    @include box-sizing(border-box);
+}
+
+html,body{
+    font-family:$font-family !important;
+    scroll-behavior:smooth;
+    padding:0 !important;
+}
+
+.wrap{
+    overflow: hidden;
+    @include fixed-top-blank-height-use(70px,56px);
+    &.inner-page{
+        @include fixed-top-blank-height-use(188px,188px);
+        @include media-max(sm){
+            @include fixed-top-blank-height-use(96px,96px);
+        }
+    }
+    // @each $name in $them-lang {
+    //     &.them-#{$name}{
+    //         @include them('them-'+$name);
+    //     }
+    // }
+}
+
+.container{
+    @include media-max(md){
+        max-width: map-get($container-max-widths, md);
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-weight: bold;
+}
+
+h1, .h1 { }
+h2, .h2 { 
+    font-size: $h2-font-size; 
+    @include media-max(sm){
+        font-size: $h4-font-size;
+    }
+}
+h3, .h3 { 
+    font-size: $h3-font-size;
+    @include media-max(sm){
+        font-size: $h4-font-size;
+    }
+}
+h4, .h4 { 
+    font-size: $h4-font-size; 
+    @include media-max(sm){
+        font-size: $h5-font-size;
+    }
+}
+h5, .h5 { 
+    font-size: $h5-font-size; 
+}
+h6, .h6 { 
+    font-size: $h6-font-size; 
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    li{
+        list-style: none;
+        padding: 0px;
+    }
+}
+
+p{
+    margin-bottom: 0;
+}
+
+a, .nav-link{
+    transition: .3s;
+    text-decoration: none;
+    color: $link-color !important;
+    &:hover{
+        transition: .3s;
+        text-decoration: none !important;
+        color: $link-hover-color !important;
+    }
+}
+
+.material-icons{
+    font-size: 20px;
+}
+
+.badge{
+    padding: 4px 8px;
+    margin-right: 4px;
+    font-size: map-get($font-size, base);
+    font-weight: normal;
+}
+
+.b-rating{
+    height: 20px;
+    span{
+        padding: 0px 1.5px 0 0px !important;
+        &:last-child{
+            padding: 0px !important;
+        }
+    }
+}

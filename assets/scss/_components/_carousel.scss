@@ -1,0 +1,11 @@
+.swiper-wrapper{
+    a{
+        // background: url(map-get($pic-group,'carousel'));
+        background-size: cover;
+        width: 100%;
+        min-height: 320px;
+        @include media-max(md){
+            min-height: 480px;
+        }
+    }
+}

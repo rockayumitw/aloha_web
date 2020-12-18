@@ -1,0 +1,21 @@
+// swiper -custome
+.swiper{
+    .swiper-button{
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+    .swiper-button-prev{
+        color: $black;
+        
+        &:after{
+            display: none;
+        }
+    }
+    .swiper-button-next{
+        color: $black;
+        &:after{
+            display: none;
+        }
+    }
+}

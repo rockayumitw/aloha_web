@@ -1,0 +1,67 @@
+.card{
+    border: 0px;
+    &.card-bg-secondary{
+        background: $white;
+        @include media-max(sm){
+            border-radius: $border-radius-sm;
+            background: $secondary;
+        }
+    }
+    .card-image-box{
+        overflow: hidden;
+        border-radius: $border-radius-lg;
+        img{
+            transition: .3s;
+        }
+        &-lg{
+            max-width: 355px;
+        }
+        &-md{
+            max-width: 255px;
+        }
+        &-sm{
+            max-width: 150px;
+        }
+    }
+    &:hover{
+        .card-image-box{
+            img{
+                transform: scale(1.5);
+                transition: .3s;
+            }
+        }
+    }
+    .card-body{
+        padding: 0px;
+        .b-rating{
+            border: 0;
+            padding: 8px 0 8px 0;
+            span{
+                padding: 0px 2px 0 0;
+            }
+        }
+    }
+    &.card-mask{
+        position: relative;
+        border-radius: $border-radius-lg;
+        overflow: hidden;
+        &:after{
+            content:'';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            @include z-index(card_linear_mask);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        }
+        .card-image-box{
+            position: absolute;
+            @include z-index(card_image);
+        }
+        .card-text{
+            width: 100%;
+            position: relative;
+            padding: 16px 25px;
+            @include z-index(card_text);
+        }
+    }
+}

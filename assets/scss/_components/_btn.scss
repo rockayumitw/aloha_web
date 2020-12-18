@@ -1,0 +1,104 @@
+
+// -----
+// btn-size
+// -----
+
+// btn-size | btn__class --color
+
+
+// size w/h - bg/text
+
+// 522/56 - 紫色/白色 -primary -100%
+// 350/56 - 紫色/白色 -100%
+// 330/56 - 紫色/白色 -100%
+// 246/54 - 黑色/白色 -dark -100%
+// 160/34 - 黑色/白色 -dark -100%
+
+// 212/56 - 白色/紫色 -xl
+// 150/56 - 紫色/白色 -lg
+// 131/56 - 紫色/白色 -md
+// 126/56 - 紫色/white | 透明/白色 -sm
+// 111/38 - 白色/紫色 -white -xs
+// 100/35 - 白色/紫色 base
+// 74/38 - 紫色/白色 
+// 40/40
+
+// btn-size
+// x/y
+// 0/17 -100% -btn-lg
+// 32/17 -btn-md  16/24px
+// 16/17 -btn-sm 
+// 16/8  -btn-xs
+
+
+
+
+$btn-padding-y-lg: 17px;
+$btn-padding-x-lg: 0;
+
+$btn-padding-y-md: 17px;
+$btn-padding-x-md: 32px;
+
+$btn-padding-y-sm: 17px;
+$btn-padding-x-sm: 16px;
+
+$btn-padding-y-xs: 8px;
+$btn-padding-x-xs: 16px;
+
+$btn-line-height-lg: 24px;
+$btn-line-height-md: 24px;
+$btn-line-height-sm: 24px;
+$btn-line-height-xs: 21px;
+
+$btn-font-size-lg: 16px;
+$btn-font-size-md: 16px;
+$btn-font-size-sm: 16px;
+$btn-font-size-xs: 14px;
+
+$btn-border-radius: $border-radius-sm;
+
+// @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius); 
+// button($color,$background,$HoverColor,$HoverBackground,$border)
+
+.btn{
+    // width: 100%;
+    font-weight: bold;
+    margin-bottom: 0px;
+    &-primary{
+        border: 0px !important;
+        @include button($white,$primary,$white,lighten($primary,5%), 0px);
+    }
+    &-outline-primary{
+        @include button($primary,transparent,lighten($primary, 5%),transparent, 1px solid lighten($primary, 5%));
+    }
+    &-white{
+        border: 0px !important;
+        @include button($primary,$white,$white,$primary, 0px solid $primary);
+    }
+    &-secondary{
+        border: 0px !important;
+        @include button($black,$secondary,$black,$secondary, 0px solid $secondary);
+    }
+    &-black{
+        border: 0px !important;
+        @include button($white,$black,$white,$black, 0px solid $black);
+    }
+    &-lg{
+        width: 100%;
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius);
+    }
+    &-md{
+        @include button-size($btn-padding-y-md, $btn-padding-x-md, 16px, $btn-line-height-md, $btn-border-radius);
+        font-size: 16px;
+    }
+    &-sm{
+        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius);
+    }
+    &-xs{
+        @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius);
+    }
+}
+
+
+
+
