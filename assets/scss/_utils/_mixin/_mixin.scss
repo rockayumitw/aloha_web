@@ -365,7 +365,7 @@
   @if $type == 'rotate-x'{
     &.__rotate-x {
       i{
-          // background-color: #fff;
+          background-color: #000;
           content: '';
           width: 100%;
           height: 2px;

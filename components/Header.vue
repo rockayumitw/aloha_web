@@ -11,13 +11,13 @@
         </b-col>
         <b-col cols="4" sm="4" md="8" lg="8" class="text-center text-md-left">
           <b-navbar-brand href="/" class="mr-0">
-            <img width="128" src="../assets/images/ic-logo-aloha.svg" alt="" />
+            <img src="../assets/images/ic-logo-aloha.svg" alt="" />
           </b-navbar-brand>
         </b-col>
         <b-col cols="4" sm="4" md="4" lg="4">
           <!--language-->
           <b-navbar-nav>
-            <language/>
+            <language />
             <b-nav-item href="#" class="d-none d-md-block"> Sign up </b-nav-item>
             <b-nav-item href="#" class=""> Login </b-nav-item>
             <b-nav-item-dropdown text="" right class="list-unstyled d-none">
@@ -58,7 +58,7 @@ export default {
   methods: {},
   components: {
     // ProductsMenu,
-    language
+    language,
   },
 };
 </script>

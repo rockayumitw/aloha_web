@@ -1,0 +1,29 @@
+
+// 登入頁面
+$login-Form-width-xl: 665px;
+
+.pic-login-bg{
+    background: url(map-get($pic-group, login-bg));
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    .login-content {
+        max-width: 540px;
+    }
+}
+
+.login{
+    width: 100%;
+    .pic-login-bg{
+        width: 100%;
+    }
+    .login-area{
+        width: 665px;
+        &.pic-login-bg{
+            background: '';
+            @include media-max(md){
+                background: url(map-get($pic-group, login-bg));
+            }
+        }
+    }
+}

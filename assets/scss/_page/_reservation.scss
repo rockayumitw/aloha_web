@@ -1,0 +1,16 @@
+
+.reservation-list{
+    @include z-index(reservation-list);
+}
+
+.reservation-received-buttons{
+    padding: 0 15px;
+    @include media-max(xs){
+        flex-wrap: wrap;
+        button{
+            width: 100%;
+        }
+    }
+    
+    
+}

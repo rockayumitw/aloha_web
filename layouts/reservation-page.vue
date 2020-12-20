@@ -1,13 +1,15 @@
 <template>
-  <div class="wrap login-page them-TW">
+  <div class="wrap reservation-page them-TW">
     <transition name="fade">
-      <!-- <Loading /> -->
+      <!-- <Loading v-show="isLoading" /> -->
     </transition>
+    <Header />
     <nuxt />
+    <Footer />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -15,24 +17,22 @@
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-.login-page {
-  &:before {
-    display: none;
-  }
-}
 </style>
 
 <script>
-// import Header from "~/components/Header.vue";
-// import Footer from "~/components/Footer.vue";
-// import Loading from "~/components/Loading/Loading.vue";
-// import { searchMixins } from '../mixins/search'
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
+import Loading from "~/components/Loading/Loading.vue";
 
 export default {
   name: "",
   head: {},
   data() {
-    return {};
+    return {
+      isActive: false,
+      isFocus: "true",
+      isLoading: false,
+    };
   },
   mounted() {},
   methods: {
@@ -41,9 +41,9 @@ export default {
     },
   },
   components: {
-    // Header,
-    // Footer,
-    // Loading,
+    Header,
+    Footer,
+    Loading,
   },
 };
 </script>

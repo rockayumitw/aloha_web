@@ -5,6 +5,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _01d9b69e = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
 const _220998b0 = () => interopDefault(import('..\\pages\\member-center.vue' /* webpackChunkName: "pages_member-center" */))
+const _311882a0 = () => interopDefault(import('..\\pages\\my-booking.vue' /* webpackChunkName: "pages_my-booking" */))
 const _fad3040a = () => interopDefault(import('..\\pages\\profilo.vue' /* webpackChunkName: "pages_profilo" */))
 const _16ca19da = () => interopDefault(import('..\\pages\\reservation-detail.vue' /* webpackChunkName: "pages_reservation-detail" */))
 const _7e4e8b2a = () => interopDefault(import('..\\pages\\reservation-received.vue' /* webpackChunkName: "pages_reservation-received" */))
@@ -36,6 +37,10 @@ export const routerOptions = {
     path: "/member-center",
     component: _220998b0,
     name: "member-center"
+  }, {
+    path: "/my-booking",
+    component: _311882a0,
+    name: "my-booking"
   }, {
     path: "/profilo",
     component: _fad3040a,

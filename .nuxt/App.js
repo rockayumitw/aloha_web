@@ -24,8 +24,9 @@ import '..\\assets\\scss\\app.scss'
 import _6f6c098b from '..\\layouts\\default.vue'
 import _534d4c1c from '..\\layouts\\inner-page.vue'
 import _5de44904 from '..\\layouts\\login-layout.vue'
+import _0798c034 from '..\\layouts\\reservation-page.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_inner-page": sanitizeComponent(_534d4c1c),"_login-layout": sanitizeComponent(_5de44904) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_inner-page": sanitizeComponent(_534d4c1c),"_login-layout": sanitizeComponent(_5de44904),"_reservation-page": sanitizeComponent(_0798c034) }
 
 export default {
   render (h, props) {
