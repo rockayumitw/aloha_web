@@ -10,7 +10,7 @@ module.exports = {
   ** Headers of the page
   */
   router:{
-    // base :"/perfume_ec_web/dist" 
+    base :"/aloha_web/dist" 
   },
   head: {
     // title: process.env.npm_package_name || '',
