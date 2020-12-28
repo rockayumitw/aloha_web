@@ -1,6 +1,6 @@
 <template>
   <div
-    class="price-box bg-mask rounded-top pr-xxs-13 pl-xxs-13 pt-xxs-5 pb-xxs-5 position-fixed w-100"
+    class="price-box bg-mask rounded-top pr-xxs-3 pl-xxs-3 pt-xxs-5 pb-xxs-5 pr-md-13 pl-md-13 pt-md-5 pb-md-5 position-fixed w-100"
     :class="active ? 'active' : ''"
   >
     <b-container>

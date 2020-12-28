@@ -125,7 +125,7 @@
                 <div class="swiper-slide" v-for="item in balis" :key="item.index">
                   <a href="/">
                     <b-card>
-                      <div class="card-image-box mb-xxs-1 rounded-lg">
+                      <div class="card-image-box-md mb-xxs-1 rounded-lg">
                         <img :src="item.image" alt="" />
                       </div>
                       <b-card-text>
@@ -140,8 +140,12 @@
                           <small class="text-gray-200">・{{ item.reviews }} reviews</small
                           ><br />
                         </div>
-                        <span class="text-gray-300 text-xxs-xs">TWD 2,480</span>
-                        <del class="text-gray-200 text-xxs-xxs">TWD 3,980</del>
+                        <span class="text-gray-300 text-xxs-xs">{{
+                          item.special_price
+                        }}</span>
+                        <del class="text-gray-200 text-xxs-xxs">{{
+                          item.sale_price
+                        }}</del>
                       </b-card-text>
                     </b-card>
                   </a>
@@ -216,10 +220,10 @@
           <b-button variant="outline-primary" class="btn-xs">SEE MORE</b-button>
         </div>
         <ul class="row">
-          <li class="col-sm-4" v-for="item in Inspirations" :key="item.index">
+          <li class="col-sm-4 mb-4" v-for="item in Inspirations" :key="item.index">
             <a href="/">
               <b-card>
-                <div class="card-image-box mb-xxs-6">
+                <div class="card-image-box-lg mb-xxs-6 rounded-lg">
                   <img :src="item.image" alt="" />
                 </div>
                 <h4 class="h4 mb-xxs-1">{{ item.title }}</h4>

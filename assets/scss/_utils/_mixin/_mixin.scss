@@ -1,17 +1,6 @@
 //writing-mode: vertical-lr;
 //writing-mode:
 
-// 字體大小計算 | 普通使用
-// @function calculateRem($size) {
-//   $remSize: $size / 16px;
-//   @return $remSize * 1rem;
-// }
-
-// @mixin normal-font-size($size) {
-//   font-size: $size;
-//   font-size: calculateRem($size);
-// }
-
 // box-Sizing
 // example: @include box-sizing(border-box);
 @mixin box-sizing($type)
@@ -23,15 +12,6 @@
  box-sizing:$type;
  }
 
- // 置中對齊
- // example: @include vertical-align();
- @mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 
 // display: Show / Hide
 // example: @include display(hide);
@@ -57,28 +37,6 @@
 @function is-valid-length($value) {
   @return (type-of($value) == "number" and not unitless($value)) 
        or (index(auto initial inherit 0, $value) != false);
-}
-
-
-// border: "false", | top | right | bottom | left
-// example:
-// dircetion: @include border(top,1px,solid,#fff);
-// no-direction: @include border('false',1px,solid,#fff);
-@mixin border($direction, $width, $style, $color) {
-  @if $direction != "false" {
-    border-#{$direction}: $width $style $color;
-  }
-  @if $direction == "false" {
-    border: $width $style $color;
-  }
-}
-
-// border-radius
-// example: @include borderRadius(10px);
-@mixin borderRadius($radius: 0.5em) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
 }
 
 // shadow: 內 | 外 陰影
@@ -122,67 +80,6 @@
   #{$property}: calc(#{$expression});
 }
 
-// @mixin btnGroup($color, $background, $border) {
-//   color: $color;
-//   background-color: darken($background, 10%);
-//   border-color: darken($border, 10%);
-
-//   &:hover,
-//   &:focus,
-//   &:active,
-//   &.active,
-//   .open > &.dropdown-toggle {
-//     color: $color;
-//     background-color: darken($background, 0%);
-//     border-color: darken($border, 0%);
-//     //lighten(color,10%)
-//   }
-
-//   &:active,
-//   &.active,
-//   .open > &.dropdown-toggle {
-//     background-image: none;
-//   }
-
-//   &.disabled,
-//   &[disabled],
-//   fieldset[disabled] & {
-//     &,
-//     &:hover,
-//     &:focus,
-//     &:active,
-//     &.active {
-//       background-color: $background;
-//       border-color: $border;
-//     }
-//   }
-// }
-
-// 圖片大小調整
-// example: @include imgBg($bgImage, $width, $height, $bg, $bgSize, $repeat, $position)
-@mixin background($backgroundImage, $width, $height, $background, $backgroundSize, $repeat, $position) {
-  @if $backgroundImage {
-    background-image: url($backgroundImage);
-  }
-  @if $width {
-    width: $width;
-  }
-  @if $height {
-    height: $height;
-  }
-  @if $background {
-    background: $bg;
-  }
-  @if $backgroundSize {
-    background-size: $backgroundSize;
-  }
-  @if $repeat {
-    background-repeat: $repeat;
-  }
-  @if $position {
-    background-position: $position;
-  }
-}
 
 
 // hack: for ie10 | ie11
@@ -193,45 +90,6 @@
   }
 }
 
-// ...隱藏最大寬度
-// example: @include ellipse('multiline',2)
-@mixin ellipse($type, $num) {
-  @if ($type == "single") {
-    white-space: nowrap;
-  }
-  @if ($type == "multiline") {
-    white-space: inherit;
-    display: -webkit-box;
-    word-break: break-word;
-  }
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: $num;
-  -moz-line-clamp: $num;
-  -ms-line-clamp: $num;
-  -webkit-box-orient: vertical;
-  -ms-box-orient: vertical;
-}
-
-// 字體設定
-// @mixin font-source-sans($font-size: false, $letterSpacing: false, $color: false, $weight: false, $line-height: false) {
-//   font-family: $font-family;
-//   @if $letterSpacing {
-//     letter-spacing: $letterSpacing;
-//   }
-//   @if $font-size {
-//     font-size: $font-size;
-//   }
-//   @if $color {
-//     color: $color;
-//   }
-//   @if $weight {
-//     font-weight: $weight;
-//   }
-//   @if $line-height {
-//     line-height: $line-height;
-//   }
-// }
 
 // 透明度跨瀏覽
 // example: @include opacity(0.8);
@@ -267,47 +125,6 @@
   background-color: $background-color;
 }
 
-
-
-// menu 樣式
-// @include menuStyle('bottom-line',red)
-@mixin menuStyle($style, $background){
-  @if $style == 'bottom-line-03'{
-    .bar {
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        background: #eee;
-        width: 100%;
-        height: 1x;
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          background: $background;
-          width: 0;
-          height: 1px;
-          transition: .2s ease;
-          @include animation(line_loading_move,15s,false,false,false,normal,forwards);
-        }
-        &:before {
-          left: 50%;
-        }
-        &:after {
-          right: 50%;
-        }
-    }
-    @include keyframes (line_loading_move){
-      0%{
-          width: 0%    
-      }
-      100%{
-          width: 100%;
-      }
-    }
-  }
-}
-
 @mixin fixed-top-blank-height-use($pc-height,$mb-height){
   &::before{
     content:'';
@@ -330,7 +147,7 @@
         width: 100%;
         height: 2px;
         @include display(show);
-        @include borderRadius(2px);
+        border-radius: 2px;
         @include transition(0.2s);
         &:nth-of-type(1) {
           @include transform(rotate(45deg));

@@ -53,7 +53,10 @@ export default {
   },
   computed: {
     route() {
-      if (this.$router.history.current.name == "search") {
+      if (
+        this.$router.history.current.name == "search" ||
+        this.$router.history.current.name == "search-result-info"
+      ) {
         return true;
       }
     },

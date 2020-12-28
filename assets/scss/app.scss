@@ -7,7 +7,7 @@
 @import "vue-simple-range-slider/dist/vueSimpleRangeSlider.css";
 @import 'vue2-datepicker/index.css';
 
-// 
+// utils
 @import './_utils/_variable';
 @import './_utils/_mixin/mixin';
 @import './_utils/_mixin/animation';
@@ -23,26 +23,18 @@
 @import './_layout/footer';
 
 // components
-// @import './_components/_loading';
 @import './_components/carousel';
 @import './_components/btn';
-// @import './_components/_item';
 @import './_components/form';
 @import './_components/border';
 @import './_components/tabs';
 @import './_components/card';
 @import './_components/swiper';
 @import './_components/check';
-// @import './_components/_menu';
 @import './_components/pagination';
-// @import './_components/_toast';
-// @import './_layout/sidebar';
-// @import './_component/modal';
 @import './_components/dropdown';
-// @import './_component/table';
 
 // page
 @import './_page/_search';
 @import './_page/_reservation';
 @import './_page/_login';
-// @import './_page/products';

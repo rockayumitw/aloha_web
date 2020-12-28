@@ -1,68 +1,6 @@
 // --------
 // input
 // --------
-
-
-// 350/38/#818A91/#CED4DA 輝 16/19
-// 219/60/8d8d8d /#916000 棕 16/24
-// 160/50/8d8d8d/#916000 宗 16/24
-
-
-/*form */
-$label-margin-bottom: 0;
-$input-color:   #00000060;
-$form-group-margin-bottom: 16px;
-$label-margin-bottom: 4px;
-
-$input-border-width: 1px;
-
-
-// spacer
-$input-padding-y-lg:($spacer * 2); // 16
-$input-padding-x-lg:($spacer * 2); // 16
-
-$input-focus-box-shadow: none;
-$input-focus-bg:#edd3a3;
-// $input-focus-box-shadow: inset 0px 0px 5px rgba($primary,0.3 );
-$input-plaintext-color: #00000099;
-
-// $input-padding-y-sm:    $input-btn-padding-y-sm !default;
-// $input-padding-x-sm:    $input-btn-padding-x-sm !default;
-// $input-font-size-sm:    $input-btn-font-size-sm !default;
-// $input-line-height-sm:  $input-btn-line-height-sm !default;
-
-$input-btn-padding-y-lg: 17px ;
-$input-btn-padding-x-lg: 16px ;
-$input-btn-font-size-lg: $font-size-base ;
-
-$input-line-height-lg:  24px ;
-$input-font-size-lg: 16px;
-
-$input-bg:  $white !default;
-$input-disabled-bg: $gray-200 !default;
-
-// $input-color:   $gray-700 !default;
-$input-border-color:    $gray-200;
-// $input-border-width:    $input-btn-border-width !default;
-// $input-box-shadow:  inset 0 1px 1px rgba($black, .075) !default;
-
-$input-border-radius:   $border-radius ;
-$input-border-radius-lg:    $border-radius-sm ;
-$input-border-radius-sm:    $border-radius-sm ;
-
-$input-focus-bg:            $input-bg ;
-$input-focus-border-color:  $primary ;
-// $input-focus-color:         $input-color !default;
-// $input-focus-width:         $input-btn-focus-width !default;
-// $input-focus-box-shadow:    $input-btn-focus-box-shadow !default;
-
-$input-placeholder-color:   $gray-300 ;
-$input-plaintext-color:     $body-color ;
-
-$input-height:      add($input-line-height , add($input-padding-y, $input-height-border, false)) ;
-$input-height-sm:   $input-line-height-sm ;
-$input-height-lg:   add($input-line-height-lg , add($input-padding-y-lg * 1.875, $input-height-border, false));
-
 .form{
   &-xl{
     padding: 23px 0px;

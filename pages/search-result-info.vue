@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section class="mb-xxs-6">
+    <!-- <section class="mb-xxs-6">
       <search-form />
-    </section>
+    </section> -->
     <b-container>
       <carousel-info class="pb-xxs-3 pb-md-6" />
       <section class="pb-xxs-9 pb-lg-8">
@@ -51,30 +51,38 @@
         >
           <b-col md="6" class="d-flex align-items-center bg-white">
             <div class="mr-xxs-1 mr-lg-3">
-              <div class="card-image-box border-half-radius border-single-radius">
+              <div class="card-image-box-lg border-half-radius border-single-radius">
                 <img src="/images/image3.jpg" alt="" />
               </div>
             </div>
-            <div>
+            <div class="w-70">
               <h6 class="h6">Deluxe Double Room A</h6>
               <div class="mb-xxs-3 text-gray-300 text-xxs-xxs lh-xxs-xxs">
                 1 bed (Queen size)
               </div>
               <ul class="d-flex flex-wrap">
-                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300 w-50">
+                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300">
                   <span class="material-icons mr-xxs-1"> wifi </span>
                   <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">Wi-Fi</span>
                 </li>
-                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300 w-50">
-                  <span class="material-icons mr-xxs-1"> wifi </span>
-                  <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">Wi-Fi</span>
+                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300">
+                  <span class="material-icons mr-xxs-1"> room_service </span>
+                  <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">room service</span>
                 </li>
-                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300 w-50">
-                  <span class="material-icons mr-xxs-1"> wifi </span>
-                  <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">air conditioner</span>
+                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300">
+                  <span class="material-icons mr-xxs-1"> restaurant </span>
+                  <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">breakfast</span>
                 </li>
-                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300 w-50">
-                  <span class="material-icons mr-xxs-1"> wifi </span>
+                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300">
+                  <span class="material-icons mr-xxs-1"> smoke_free </span>
+                  <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">smoke free</span>
+                </li>
+                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300">
+                  <span class="material-icons mr-xxs-1"> tv </span>
+                  <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">television</span>
+                </li>
+                <li class="d-flex text-xxs-xs lh-xxs-xs text-gray-300">
+                  <span class="material-icons mr-xxs-1"> ac_unit </span>
                   <span class="mr-xxs-4 mr-xxs-1 d-none d-lg-block">air conditioner</span>
                 </li>
               </ul>
@@ -122,10 +130,16 @@
   .card-image-box {
     max-width: 255px;
     max-height: 175px;
+    @media (max-width: 979px) {
+      max-width: 150px !important;
+    }
   }
   ul {
     li {
       width: 50%;
+      @media (max-width: 979px) {
+        width: auto;
+      }
     }
   }
 }

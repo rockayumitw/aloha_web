@@ -3,60 +3,6 @@
 // btn-size
 // -----
 
-// btn-size | btn__class --color
-
-
-// size w/h - bg/text
-
-// 522/56 - 紫色/白色 -primary -100%
-// 350/56 - 紫色/白色 -100%
-// 330/56 - 紫色/白色 -100%
-// 246/54 - 黑色/白色 -dark -100%
-// 160/34 - 黑色/白色 -dark -100%
-
-// 212/56 - 白色/紫色 -xl
-// 150/56 - 紫色/白色 -lg
-// 131/56 - 紫色/白色 -md
-// 126/56 - 紫色/white | 透明/白色 -sm
-// 111/38 - 白色/紫色 -white -xs
-// 100/35 - 白色/紫色 base
-// 74/38 - 紫色/白色 
-// 40/40
-
-// btn-size
-// x/y
-// 0/17 -100% -btn-lg
-// 32/17 -btn-md  16/24px
-// 16/17 -btn-sm 
-// 16/8  -btn-xs
-
-
-
-
-$btn-padding-y-lg: 17px;
-$btn-padding-x-lg: 0;
-
-$btn-padding-y-md: 17px;
-$btn-padding-x-md: 32px;
-
-$btn-padding-y-sm: 17px;
-$btn-padding-x-sm: 16px;
-
-$btn-padding-y-xs: 8px;
-$btn-padding-x-xs: 16px;
-
-$btn-line-height-lg: 24px;
-$btn-line-height-md: 24px;
-$btn-line-height-sm: 24px;
-$btn-line-height-xs: 21px;
-
-$btn-font-size-lg: 16px;
-$btn-font-size-md: 16px;
-$btn-font-size-sm: 16px;
-$btn-font-size-xs: 14px;
-
-$btn-border-radius: $border-radius-sm;
-
 // @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius); 
 // button($color,$background,$HoverColor,$HoverBackground,$border)
 
