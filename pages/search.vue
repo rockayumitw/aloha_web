@@ -1,8 +1,5 @@
 <template>
   <div class="search-page">
-    <section class="">
-      <search-form />
-    </section>
     <section class="pt-xxs-6 pb-xxs-6">
       <b-container>
         <b-row>
@@ -14,25 +11,47 @@
             <filter-area />
           </b-col>
           <b-col sm="12" lg="8">
-            <div class="d-none d-md-block"><sort /></div>
+            <div class="d-none d-lg-block"><sort /></div>
+            <div class="d-flex d-sm-none justify-content-center">
+              <h3 class="h3">Bangkok</h3>
+              <small class="text-primary">3,240</small>
+            </div>
+            <div
+              class="pt-4 pb-4 d-flex d-lg-none justify-content-around align-items-center position-relative"
+            >
+              <b-button v-b-modal.modal-filter class="text-uppercase">
+                <span class="material-icons"> filter_list </span>
+                filter
+              </b-button>
+              <b-button class="text-uppercase" @click="isSort = !isSort">
+                <span class="material-icons"> sort </span>
+                sort
+                <div
+                  v-if="isSort == true"
+                  class="position-absolute index-sort text-left bg-secondary rounded p-3"
+                >
+                  <sort />
+                </div>
+              </b-button>
+            </div>
             <ul class="pb-xxs-3 pb-sm-6 pb-lg-9">
               <li
                 class="search-item list-unstyled"
                 v-for="item in searchResult"
                 :key="item.index"
               >
-                <a href="/">
+                <a href="/search-result-info">
                   <div class="card">
                     <b-row no-gutters>
                       <b-col cols="5" sm="4">
-                        <div class="card-image-box">
+                        <div class="card-image-box border-half-radius">
                           <img :src="item.image" alt="" />
                         </div>
                       </b-col>
                       <b-col cols="7" sm="8">
                         <b-row
                           no-gutters
-                          class="pt-xxs-0 pr-xxs-0 pl-xxs-1 pt-xs-3 pt-sm-3 pl-sm-2 pb-lg-2"
+                          class="pt-xxs-0 pr-xxs-0 pl-xxs-1 pt-xs-1 pt-sm-1 pl-sm-2 pb-lg-2"
                         >
                           <b-col cols="12" sm="6">
                             <span class="text-xxs-xxs text-primary">{{ item.city }}</span>
@@ -110,6 +129,14 @@
       </b-container>
     </section>
     <subscribe />
+
+    <b-modal id="modal-filter" title="BootstrapVue">
+      <template #modal-title>
+        <span class="material-icons"> filter_list </span>
+        filter
+      </template>
+      <filter-area />
+    </b-modal>
   </div>
 </template>
 
@@ -118,20 +145,20 @@ import { mapState, mapGetters } from "vuex";
 import subscribe from "~/components/subscribe";
 import pagination from "@/components/pagination";
 import filterArea from "@/components/Filter";
-import searchForm from "@/components/Search";
 import Sort from "@/components/Sort";
 export default {
-  layout: "default",
+  layout: "search-page",
   head: {},
   components: {
     filterArea,
-    searchForm,
     Sort,
     pagination,
     subscribe,
   },
   data() {
-    return {};
+    return {
+      isSort: false,
+    };
   },
   computed: {
     ...mapGetters({

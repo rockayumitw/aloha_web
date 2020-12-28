@@ -4,9 +4,11 @@
 
 // 套件
 @import '/node_modules/bootstrap/scss/bootstrap';
+@import "vue-simple-range-slider/dist/vueSimpleRangeSlider.css";
+@import 'vue2-datepicker/index.css';
 
 // 
-@import './_utils/variable';
+@import './_utils/_variable';
 @import './_utils/_mixin/mixin';
 @import './_utils/_mixin/animation';
 @import './_utils/grid';
@@ -36,7 +38,7 @@
 // @import './_components/_toast';
 // @import './_layout/sidebar';
 // @import './_component/modal';
-// @import './_component/dropdown';
+@import './_components/dropdown';
 // @import './_component/table';
 
 // page

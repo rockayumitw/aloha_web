@@ -1,5 +1,5 @@
 <template>
-  <ul class="d-flex font-weight-bold pt-sm-2 pb-xxs-6">
+  <ul class="d-block d-lg-flex font-weight-bold pt-sm-2 pb-xxs-6">
     <li class="text-primary text-xxs-sm pr-0 pr-md-6">
       <a href="javascript:void(0)"> Recommended </a>
     </li>

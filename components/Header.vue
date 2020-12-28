@@ -19,7 +19,7 @@
           <b-navbar-nav>
             <language />
             <b-nav-item href="#" class="d-none d-md-block"> Sign up </b-nav-item>
-            <b-nav-item href="#" class=""> Login </b-nav-item>
+            <b-nav-item href="/Login" class=""> Login </b-nav-item>
             <b-nav-item-dropdown text="" right class="list-unstyled d-none">
               <template #button-content>
                 <b-avatar
@@ -35,28 +35,33 @@
         </b-col>
       </b-navbar>
     </b-container>
+    <section class="">
+      <search-form-inner-page v-if="route == true" />
+    </section>
   </header>
 </template>
 
 <script>
 import { stickyMixins } from "../mixins/sticky.js";
-// import ProductsMenu from "@/components/ProductsMenu";
 import language from "@/components/language";
+// import searchForm from "@/components/SearchIndex";
+import searchFormInnerPage from "@/components/SearchInnerPage";
 export default {
   mixins: [stickyMixins],
   data() {
     return {};
   },
   computed: {
-    // route() {
-    //   if (this.$router.history.current.name != "index") {
-    //     return true;
-    //   }
-    // },
+    route() {
+      if (this.$router.history.current.name == "search") {
+        return true;
+      }
+    },
   },
   mounted() {},
   methods: {},
   components: {
+    searchFormInnerPage,
     // ProductsMenu,
     language,
   },

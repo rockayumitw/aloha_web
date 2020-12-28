@@ -8,7 +8,17 @@
         target="_blank"
         class="swiper-slide"
         :style="{ 'background-image': 'url(' + slider.image + ')' }"
-      ></a>
+      >
+        <h2 class="text-white text-center font-weight text-xxs-xl text-md-2xl">
+          {{ slider.content }}
+        </h2>
+      </a>
+    </div>
+    <div class="swiper-button-prev" slot="button-prev">
+      <span class="material-icons text-white"> keyboard_arrow_left </span>
+    </div>
+    <div class="swiper-button-next" slot="button-next">
+      <span class="material-icons text-white"> keyboard_arrow_right </span>
     </div>
     <div class="swiper-pagination"></div>
   </div>

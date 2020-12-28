@@ -1,18 +1,42 @@
 <template>
   <main class="" data-offset="0">
-    <section class="carousel">
+    <section class="carousel position-relative">
       <carousel :sliders="sliders" />
     </section>
     <section>
       <b-container>
         <b-form inline class="form-lg justify-content-center bg-secondary mx-auto">
-          <b-input-group class="mr-0 mr-lg-3 mb-3 mb-lg-0" size="lg">
+          <b-input-group class="mr-0 mr-lg-3 mb-3 mb-lg-0 position-relative" size="lg">
             <template #prepend>
               <b-input-group-text>
                 <span class="material-icons"> room </span>
               </b-input-group-text>
             </template>
-            <b-form-input placeholder="Destination"></b-form-input>
+            <input
+              type="button"
+              @click="active = !active"
+              class="form-control input-button border-right-radius"
+              value="Destination"
+            />
+            <ul
+              class="dropdown-menu bg-white p-xxs-3 w-100 dropdown-index rounded"
+              :class="active ? 'active' : ''"
+            >
+              <li class="d-flex">
+                <span class="material-icons mr-xxs-1"> star </span>
+                <div>
+                  <span class="text-xxs-sm d-block">Bangkok</span>
+                  <span class="text-xxs-xxs text-gray-300">Thailand</span>
+                </div>
+              </li>
+              <li class="d-flex">
+                <span class="material-icons mr-xxs-1"> star </span>
+                <div>
+                  <span class="text-xxs-sm d-block">Osaka</span>
+                  <span class="text-xxs-xxs text-gray-300">Japan</span>
+                </div>
+              </li>
+            </ul>
           </b-input-group>
           <b-input-group class="mr-0 mr-lg-3 mb-3 mb-lg-0" size="lg">
             <template #prepend>
@@ -20,16 +44,65 @@
                 <span class="material-icons"> date_range </span>
               </b-input-group-text>
             </template>
-            <b-form-input placeholder="Check-in / Check-out"></b-form-input>
+            <date-picker
+              class="form-control p-0"
+              v-model="rangDate"
+              :default-value="new Date()"
+              type="date"
+              range
+              placeholder="Check-in / Check-out"
+            ></date-picker>
           </b-input-group>
+          <!---dropdown-->
           <b-input-group class="mr-0 mr-lg-3 mb-3 mb-lg-0" size="lg">
             <template #prepend>
               <b-input-group-text>
                 <span class="material-icons"> person </span>
               </b-input-group-text>
             </template>
-            <b-form-input placeholder="Guests"></b-form-input>
+            <input
+              type="button"
+              @click="active2 = !active2"
+              class="form-control input-button border-right-radius"
+              value="Guests"
+            />
+            <ul
+              class="dropdown-menu bg-white p-xxs-3 w-100 dropdown-index rounded"
+              :class="active2 ? 'active' : ''"
+            >
+              <li class="d-flex">
+                <label for="Adult">Adult</label>
+                <b-form-spinbutton
+                  id="Adult"
+                  v-model="value1"
+                  min="1"
+                  max="100"
+                  class="border-0 bg-transparent w-100"
+                ></b-form-spinbutton>
+              </li>
+              <li class="d-flex">
+                <label for="Child">Child</label>
+                <b-form-spinbutton
+                  id="Child"
+                  v-model="value2"
+                  min="1"
+                  max="100"
+                  class="border-0 bg-transparent w-100"
+                ></b-form-spinbutton>
+              </li>
+              <li class="d-flex">
+                <label for="Room">Room</label>
+                <b-form-spinbutton
+                  id="Room"
+                  v-model="value3"
+                  min="1"
+                  max="100"
+                  class="border-0 bg-transparent w-100"
+                ></b-form-spinbutton>
+              </li>
+            </ul>
           </b-input-group>
+          <!--dropdown-->
           <b-button variant="primary" class="btn-md font-weight" @click="search"
             >SEARCH</b-button
           >
@@ -52,7 +125,7 @@
                 <div class="swiper-slide" v-for="item in balis" :key="item.index">
                   <a href="/">
                     <b-card>
-                      <div class="card-image-box mb-xxs-1">
+                      <div class="card-image-box mb-xxs-1 rounded-lg">
                         <img :src="item.image" alt="" />
                       </div>
                       <b-card-text>
@@ -175,6 +248,7 @@ import { mapState, mapGetters } from "vuex";
 // import { apiTestData } from "~/api/course.js";
 import carousel from "~/components/Carousel";
 import subscribe from "~/components/Subscribe";
+import DatePicker from "vue2-datepicker";
 // gsap.registerPlugin(ScrollTrigger);
 
 export default {
@@ -182,10 +256,17 @@ export default {
   components: {
     carousel,
     subscribe,
+    DatePicker,
   },
   data() {
     return {
+      value1: 1,
+      value2: 1,
+      value3: 1,
       value: 5,
+      active: false,
+      active2: false,
+      rangDate: [new Date(2019, 9, 8), new Date(2019, 9, 19)],
       tabsSwiperOption: {
         slidesPerView: "auto",
         spaceBetween: 30,
@@ -227,7 +308,8 @@ export default {
   methods: {
     search() {
       // console.log(this.$route);
-      this.$route.push({ path: "search" });
+      location.href = "/search";
+      // this.$route.push({ name: "search" });
     },
   },
 };

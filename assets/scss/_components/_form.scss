@@ -65,7 +65,24 @@ $input-height-lg:   add($input-line-height-lg , add($input-padding-y-lg * 1.875,
 
 .form{
   &-xl{
-    padding: 24px 0px;
+    padding: 23px 0px;
+    .input-group-text{
+      @include media-max(lg){
+        padding: 16px 8px !important;
+      }
+    }
+    .input-group{
+      max-width: 232px;
+        @include media-max(md){
+          max-width: 100%;
+          width: 100%!important;
+        }
+      }
+      .btn{
+        @include media-max(md){
+          width: 100%;
+        }
+      }
   }
   &-lg{
     padding: 24px;
@@ -115,6 +132,10 @@ $input-height-lg:   add($input-line-height-lg , add($input-padding-y-lg * 1.875,
     border-radius: $border-radius-sm;
   }
 
+  .input-button{
+    min-width: 170px !important;
+    color: $gray-300;
+  }
 
 .input-group-text {
     display: flex;
@@ -201,3 +222,43 @@ $input-height-lg:   add($input-line-height-lg , add($input-padding-y-lg * 1.875,
     padding-right: $custom-select-padding-x + $custom-select-indicator-padding;
   }
   
+  // vue-simple-range-slider 套件
+  .simple-range-slider-bar{
+    background: $primary !important;
+  }
+  .simple-range-slider-anchor{
+    background: $primary !important;
+  }
+
+  // datePicker 套件
+  .mx-icon-calendar{
+    display: none;
+  }
+
+  .mx-datepicker-range{
+    width: 100%;
+  }
+
+  .mx-calendar-content .cell{
+    &.active{
+      background: $primary;
+      border-top-left-radius: $border-radius-sm !important;
+      border-bottom-left-radius: $border-radius-sm;
+      &:last-child{
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-top-right-radius: $border-radius-sm;
+        border-bottom-right-radius: $border-radius-sm;
+      }
+    }
+  }
+
+  .mx-input{
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+    height: $input-height-lg;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+  }

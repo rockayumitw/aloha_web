@@ -34,7 +34,6 @@
           <a class="text-primary font-weight-bold" href="/">EDIT DETAIL</a>
         </div>
       </section>
-
       <section>
         <b-row
           no-gutters
@@ -48,10 +47,11 @@
         <b-row
           no-gutters
           class="card md-xxs-3 mt-xxs-3 md-lg-6 mt-lg-6 card-bg-secondary"
+          @click="isActive(true)"
         >
           <b-col md="6" class="d-flex align-items-center bg-white">
             <div class="mr-xxs-1 mr-lg-3">
-              <div class="card-image-box">
+              <div class="card-image-box border-half-radius border-single-radius">
                 <img src="/images/image3.jpg" alt="" />
               </div>
             </div>
@@ -111,6 +111,7 @@
         </b-row>
       </section>
     </b-container>
+    <price-box :active="priceBox" />
   </div>
 </template>
 
@@ -131,31 +132,34 @@
 </style>
 
 <script>
-import searchForm from "@/components/Search";
+import searchForm from "@/components/SearchInnerPage";
 import CarouselInfo from "@/components/Carousel-Info";
+import PriceBox from "@/components/PriceBox";
 export default {
-  layout: "default",
+  layout: "search-page",
   components: {
     searchForm,
     CarouselInfo,
+    PriceBox,
   },
   data() {
     return {
       value: 0,
       roomData: [{}],
+      counter: 0,
+      priceBox: false,
     };
   },
+  mounted() {
+    console.log(this.priceBox);
+    let _this = this;
+    this.$nuxt.$on("priceBox", function (val) {
+      _this.isActive(val);
+    });
+  },
   methods: {
-    toast(description) {
-      // console.log(append);
-      this.counter++;
-      this.$bvToast.toast(description, {
-        // title: `Toaster ${toaster}`,
-        toaster: "b-toaster-top-center",
-        solid: false,
-        autoHideDelay: 5000,
-        appendToast: false,
-      });
+    isActive(val) {
+      this.priceBox = val;
     },
   },
 };

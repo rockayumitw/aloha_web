@@ -17,9 +17,18 @@ html,body{
     overflow: hidden;
     @include fixed-top-blank-height-use(72px,56px);
     &.inner-page{
-        @include fixed-top-blank-height-use(96px,80px);
+        @include fixed-top-blank-height-use(200px,80px);
         @include media-max(sm){
-            @include fixed-top-blank-height-use(96px,96px);
+            @include fixed-top-blank-height-use(184px,96px);
+        }
+        @include media-max(xs){
+            @include fixed-top-blank-height-use(112px,96px);
+        }
+    }
+    &.search-page{
+        @include fixed-top-blank-height-use(200px,180px);
+        @include media-max(sm){
+            @include fixed-top-blank-height-use(180px,100px);
         }
     }
     &.reservation-page{
@@ -108,26 +117,12 @@ a, .nav-link{
     font-weight: normal;
 }
 
-.b-rating{
-    height: 20px;
-    span{
-        padding: 0px 1.5px 0 0px !important;
-        &:last-child{
-            padding: 0px !important;
-        }
-    }
+.bottom-0{
+    bottom: 0px;
 }
 
-
-
-
-
-
-
-// pic
-@each $name, $item in $pic-group{
-    .bg-#{$name}{
-        background: map-get($pic-group, $name);
-        background-size: contain;
+@each $name, $item in $z-index{
+    .index-#{$name}{
+        z-index:$item;
     }
 }

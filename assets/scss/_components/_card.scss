@@ -7,21 +7,40 @@
             background: $secondary;
         }
     }
+    &.card-bg-secondary-xs{
+        background: $white;
+        @include media-max(xs){
+            border-radius: $border-radius-sm;
+            background: $secondary;
+        }
+    }
     .card-image-box{
         overflow: hidden;
-        border-radius: $border-radius-lg;
+        // border-radius: $border-radius-lg;
         img{
             transition: .3s;
         }
+        
         &-lg{
+            overflow: hidden;
+            border-radius: $border-radius-lg;
             max-width: 355px;
         }
         &-md{
+            overflow: hidden;
+            border-radius: $border-radius-lg;
             max-width: 255px;
         }
         &-sm{
+            overflow: hidden;
+            border-radius: $border-radius-lg;
             max-width: 150px;
         }
+        // &-xs{
+        //     overflow: hidden;
+        //     // border-radius: $border-radius-lg;
+        //     max-width: 100%;
+        // }
     }
     &:hover{
         .card-image-box{

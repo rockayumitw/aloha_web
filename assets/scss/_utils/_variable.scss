@@ -69,6 +69,7 @@ $gray-300: #666666;   // 0000009a
 $gray-400: #212121;   // 000000de
 $gray-500: #121212;   
 $black: #000;
+$mask: rgba(0,0,0,0.8);
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -102,6 +103,7 @@ $theme-colors: (
     "light":      $light,
     "white":      $white,
     "black":      $black,
+    "mask":       $mask,
     "dark":       $dark,
     "gray-100":   $gray-100,
     "gray-200":   $gray-200,
@@ -171,6 +173,11 @@ $border-color:  $primary !default;
 // z-index
 $z-index: (
   loading: 1050,
+  carousel_content: 10,
+  carousel_mask: 9,
+  price-box:5,
+  sort: 4,
+  dropdownMenuIndex:5,
   reservation-list:4,
   card_text: 3,
   card_linear_mask: 2,
@@ -186,6 +193,7 @@ $grid-breakpoints:(
     md : 991.98px,
     lg : 1199.98px,
     xl : 1399.98px,
+    2xl: 1599.98px
 );
 
 // 圖片路徑

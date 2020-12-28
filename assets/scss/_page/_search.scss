@@ -9,6 +9,9 @@
                 transform: scale(1.5);
             }
         }
+        @include media-max(xs){
+            border-radius: 0px !important;
+        }
     } 
     .search-item {
         padding: 24px 0 24px 0;
@@ -37,5 +40,36 @@
             flex-direction: column;
             justify-content: flex-end;
         }
+    }
+}
+
+.price-box{
+    @include z-index(price-box);
+    opacity:0;
+    @include animation(fadeOut,0.7s,false,false,false,normal,forwards);
+    &.active{
+        @include animation(fadeIn,0.7s,false,false,false,normal,forwards);
+    }
+}
+
+@include keyframes (fadeOut){
+    0%{
+        bottom: 0px;
+        opacity: 1;   
+    }
+    100%{
+        bottom: -104px;
+        opacity: 0;  
+    }
+}
+
+@include keyframes (fadeIn){
+    0%{
+        bottom: -104px;
+        opacity: 0;   
+    }
+    100%{
+        bottom: 0px;
+        opacity: 1;  
     }
 }

@@ -9,18 +9,20 @@ var state = function state() {
   return {
     sliders: [{
       id: 1,
-      image: '/images/image1.jpg',
+      image: '././images/image1.jpg',
+      content: 'Discover your ideal hotel',
       url: '/'
     }, {
       id: 2,
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
+      content: 'Discover your ideal hotel',
       url: '/'
     }],
     balis: [{
       id: 1,
       name: 'Hotel Aqua',
       url: '/',
-      image: '/images/image5.jpg',
+      image: './images/image5.jpg',
       score: 5.0,
       sale_price: 'TWD 3,980',
       special_price: 'TWD 2,480',
@@ -29,7 +31,7 @@ var state = function state() {
       id: 1,
       name: 'Hotel Aqua',
       url: '/',
-      image: '/images/image5.jpg',
+      image: './images/image5.jpg',
       score: 5.0,
       sale_price: 'TWD 3,980',
       special_price: 'TWD 2,480',
@@ -38,7 +40,7 @@ var state = function state() {
       id: 1,
       name: 'Mr. Kawasaki Inn',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       score: 4.0,
       sale_price: '',
       special_price: 'TWD 3,380',
@@ -47,7 +49,7 @@ var state = function state() {
       id: 1,
       name: 'Weekly Paradisen',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       score: 4.0,
       sale_price: '',
       special_price: 'TWD 4,780',
@@ -56,7 +58,7 @@ var state = function state() {
       id: 1,
       name: 'Beast Hotel',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       score: 4.0,
       sale_price: '',
       special_price: 'TWD 1,980',
@@ -66,49 +68,49 @@ var state = function state() {
       id: 1,
       name: 'Osaka',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       location: 'JAPAN'
     }, {
       id: 1,
       name: 'Osaka',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       location: 'JAPAN'
     }, {
       id: 1,
       name: 'Kyoto',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       location: 'JAPAN'
     }, {
       id: 1,
       name: 'Reykjavík',
       url: '/',
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       location: 'iceland'
     }],
     Inspirations: [{
       id: 1,
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       url: '/',
       title: 'The fifth most visited country',
       content: 'Italy is the fifth most visited country in the world, with a total of 52.3 million…'
     }, {
       id: 1,
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       url: '/',
       title: 'Visit Thailand for Bangkok',
       content: 'Italy is the fifth most visited country in the world, with a total of 52.3 million…'
     }, {
       id: 1,
-      image: '/images/image5.jpg',
+      image: '././images/image5.jpg',
       url: '/',
       title: 'Lord of the Rings Toury',
       content: 'Italy is the fifth most visited country in the world, with a total of 52.3 million…'
     }],
     searchResult: [{
       id: 1,
-      image: '/images/image1.jpg',
+      image: '././images/image1.jpg',
       city: 'Rachada, Bangkok',
       url: '/',
       distance: '2km',
@@ -129,7 +131,7 @@ var state = function state() {
       special_price: 1980
     }, {
       id: 1,
-      image: '/images/image1.jpg',
+      image: '././images/image1.jpg',
       city: 'Rachada, Bangkok',
       url: '/',
       distance: '2km',

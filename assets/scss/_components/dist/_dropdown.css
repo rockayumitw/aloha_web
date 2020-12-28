@@ -1,0 +1,20 @@
+.b-dropdown button {
+  background: transparent;
+  padding: 0;
+}
+.b-dropdown button:after {
+  display: none;
+}
+.b-dropdown button:hover {
+  background: transparent;
+}
+.b-dropdown button.active, .b-dropdown button.show {
+  background: transparent !important;
+}
+.b-dropdown button .dropdown-menu {
+  width: 100%;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+  background: transparent !important;
+}
