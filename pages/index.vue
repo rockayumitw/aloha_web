@@ -312,7 +312,7 @@ export default {
   methods: {
     search() {
       // console.log(this.$route);
-      location.href = "/search";
+      location.href = "/aloha_web/dist/search";
       // this.$route.push({ name: "search" });
     },
   },
