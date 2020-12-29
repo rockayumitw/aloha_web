@@ -243,17 +243,11 @@
 <script>
 import "swiper/css/swiper.css";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-// import { gsap } from "gsap/dist/gsap";
-// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { BIcon } from "bootstrap-vue";
 import { mapState, mapGetters } from "vuex";
-// import axios from "axios";
-// import { apiTestData } from '~/api/course.js'
-// import { apiTestData } from "~/api/course.js";
 import carousel from "~/components/Carousel";
 import subscribe from "~/components/Subscribe";
 import DatePicker from "vue2-datepicker";
-// gsap.registerPlugin(ScrollTrigger);
 
 export default {
   layout: "default",
