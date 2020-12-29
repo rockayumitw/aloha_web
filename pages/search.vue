@@ -165,18 +165,6 @@ export default {
       searchResult: "slider/searchResult",
     }),
   },
-  methods: {
-    toast(description) {
-      // console.log(append);
-      this.counter++;
-      this.$bvToast.toast(description, {
-        // title: `Toaster ${toaster}`,
-        toaster: "b-toaster-top-center",
-        solid: false,
-        autoHideDelay: 5000,
-        appendToast: false,
-      });
-    },
-  },
+  methods: {},
 };
 </script>

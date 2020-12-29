@@ -1,7 +1,7 @@
 // import server from '../apis/http.js'
 // import { apiTestData } from "../apis/course";
-import axios from 'axios'
-import { apiTestData } from '~/api/course.js'
+// import axios from 'axios'
+// import { apiTestData } from '~/api/course.js'
 
 export const state = () => ({
   // sliders: [

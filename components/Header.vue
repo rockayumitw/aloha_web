@@ -44,7 +44,6 @@
 <script>
 import { stickyMixins } from "../mixins/sticky.js";
 import language from "@/components/language";
-// import searchForm from "@/components/SearchIndex";
 import searchFormInnerPage from "@/components/SearchInnerPage";
 export default {
   mixins: [stickyMixins],
@@ -65,7 +64,6 @@ export default {
   methods: {},
   components: {
     searchFormInnerPage,
-    // ProductsMenu,
     language,
   },
 };

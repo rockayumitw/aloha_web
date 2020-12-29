@@ -5,14 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.actions = exports.mutations = exports.getters = exports.state = void 0;
 
-var _axios = _interopRequireDefault(require("axios"));
-
-var _course = require("~/api/course.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 // import server from '../apis/http.js'
 // import { apiTestData } from "../apis/course";
+// import axios from 'axios'
+// import { apiTestData } from '~/api/course.js'
 var state = function state() {
   return {// sliders: [
     //   {
@@ -74,7 +70,7 @@ var actions = {
           case 0:
             commit = _ref.commit;
             _context.next = 3;
-            return regeneratorRuntime.awrap((0, _course.apiTestData)().then(function (res) {
+            return regeneratorRuntime.awrap(apiTestData().then(function (res) {
               return res.data;
             })["catch"](function (err) {
               return console.error(err);

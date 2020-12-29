@@ -2,7 +2,6 @@ const webpack = require('webpack')
 module.exports = {
   mode: 'universal',
   env: {
-    // /perfume_ec_web/dist/ compiler
     // title: process.env.npm_package_name || ''
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
