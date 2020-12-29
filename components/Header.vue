@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed-top bg-white" :class="{ unpinned: scrolled, sticky: isActive }">
+  <header class="fixed-top bg-white">
     <b-container>
       <b-navbar toggleable="lg" type="dark" variant="" class="row no-gutters">
         <b-col cols="4" sm="4" class="d-block d-md-none">
@@ -42,11 +42,11 @@
 </template>
 
 <script>
-import { stickyMixins } from "../mixins/sticky.js";
+// import { stickyMixins } from "../mixins/sticky.js";
 import language from "@/components/language";
 import searchFormInnerPage from "@/components/SearchInnerPage";
 export default {
-  mixins: [stickyMixins],
+  // mixins: [stickyMixins],
   data() {
     return {};
   },
