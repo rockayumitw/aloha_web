@@ -107,24 +107,24 @@ export default {
         big: [
           {
             id: 1,
-            image: "./images/image3.jpg",
+            image: "../images/image3.jpg",
             url: "/",
           },
         ],
         small: [
           {
             id: 2,
-            image: "./images/image2.jpg",
+            image: "../images/image2.jpg",
             url: "/",
           },
           {
             id: 3,
-            image: "./images/image3.jpg",
+            image: "../images/image3.jpg",
             url: "/",
           },
           {
             id: 3,
-            image: "./images/image4.jpg",
+            image: "../images/image4.jpg",
             url: "/",
           },
         ],

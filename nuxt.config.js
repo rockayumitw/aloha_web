@@ -80,10 +80,8 @@ module.exports = {
     ]
   },
   fontawesome: {
-    // icon 的標籤使用 <fa>，這邊不設定就會依照 plugin 裡的設定<font-awesome-icon>
     component: 'fa',
     imports: [
-      // 引入 fas 所有的icon
       {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['fas']
