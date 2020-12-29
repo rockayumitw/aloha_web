@@ -22,7 +22,7 @@ var state = function state() {
       id: 1,
       name: 'Hotel Aqua',
       url: '/',
-      image: './images/image24.jpg',
+      image: '././images/image24.jpg',
       score: 5.0,
       sale_price: 'TWD 3,980',
       special_price: 'TWD 2,480',
@@ -31,7 +31,7 @@ var state = function state() {
       id: 2,
       name: 'Mr. Kawasaki Inn',
       url: '/',
-      image: './images/image2.jpg',
+      image: '././images/image2.jpg',
       score: 4.0,
       sale_price: '',
       special_price: 'TWD 3,380',
@@ -40,7 +40,7 @@ var state = function state() {
       id: 3,
       name: 'Weekly Paradise',
       url: '/',
-      image: './images/image3.jpg',
+      image: '././images/image3.jpg',
       score: 4.0,
       sale_price: '',
       special_price: 'TWD 4,780',
@@ -49,7 +49,7 @@ var state = function state() {
       id: 4,
       name: 'Beast Hotel',
       url: '/',
-      image: './images/image4.jpg',
+      image: '././images/image4.jpg',
       score: 4.0,
       sale_price: '',
       special_price: 'TWD 1,980',
@@ -68,31 +68,31 @@ var state = function state() {
       id: 1,
       name: 'Osaka',
       url: '/',
-      image: './images/image4.jpg',
+      image: '././images/image4.jpg',
       location: 'JAPAN'
     }, {
       id: 2,
       name: 'Kyoto',
       url: '/',
-      image: './images/image5.jpg',
+      image: '././images/image5.jpg',
       location: 'JAPAN'
     }, {
       id: 3,
       name: 'Reykjavík',
       url: '/',
-      image: './images/image6.jpg',
+      image: '././images/image6.jpg',
       location: 'iceland'
     }, {
       id: 4,
       name: 'Paris',
       url: '/',
-      image: './images/image25.jpg',
+      image: '././images/image25.jpg',
       location: 'France'
     }, {
       id: 5,
       name: 'Roma',
       url: '/',
-      image: './images/image26.jpg',
+      image: '././images/image26.jpg',
       location: 'Italy'
     }, {
       id: 6,
@@ -103,26 +103,26 @@ var state = function state() {
     }],
     Inspirations: [{
       id: 1,
-      image: './images/image8.jpg',
+      image: '././images/image8.jpg',
       url: '/',
       title: 'The fifth most visited country',
       content: 'Italy is the fifth most visited country in the world, with a total of 52.3 million…'
     }, {
       id: 2,
-      image: './images/image9.jpg',
+      image: '././images/image9.jpg',
       url: '/',
       title: 'Visit Thailand for Bangkok',
       content: 'Italy is the fifth most visited country in the world, with a total of 52.3 million…'
     }, {
       id: 3,
-      image: './images/image10.jpg',
+      image: '././images/image10.jpg',
       url: '/',
       title: 'Lord of the Rings Toury',
       content: 'Italy is the fifth most visited country in the world, with a total of 52.3 million…'
     }],
     searchResult: [{
       id: 1,
-      image: './images/image11.jpg',
+      image: '././images/image11.jpg',
       city: 'Rachada, Bangkok',
       url: '/',
       distance: '2km',
@@ -143,7 +143,7 @@ var state = function state() {
       special_price: 1980
     }, {
       id: 2,
-      image: './images/image12.jpg',
+      image: '././images/image12.jpg',
       city: 'Phaya Thai, Bangkok',
       url: '/',
       distance: '2.9km',
@@ -162,7 +162,7 @@ var state = function state() {
       special_price: 1680
     }, {
       id: 3,
-      image: './images/image17.jpg',
+      image: '././images/image17.jpg',
       city: 'Bangkapi, Bangkok',
       url: '/',
       distance: '14km',
@@ -181,7 +181,7 @@ var state = function state() {
       special_price: 2460
     }, {
       id: 4,
-      image: './images/image14.jpg',
+      image: '././images/image14.jpg',
       city: 'Chatuchack, Bangkok',
       url: '/',
       distance: '12km',
@@ -200,7 +200,7 @@ var state = function state() {
       special_price: 2240
     }, {
       id: 5,
-      image: './images/image15.jpg',
+      image: '././images/image15.jpg',
       city: 'Chatuchack, Bangkok',
       url: '/',
       distance: '8km',
@@ -219,7 +219,7 @@ var state = function state() {
       special_price: 1890
     }, {
       id: 6,
-      image: './images/image16.jpg',
+      image: '././images/image16.jpg',
       city: 'Chatuchack, Bangkok',
       url: '/',
       distance: '4.4km',
