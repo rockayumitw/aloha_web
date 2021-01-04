@@ -15,8 +15,9 @@ $shadow: rgba(0,40,62,0.5);
 // $them-lang:'TW','JP','EN','CN','KO';
 $paragraph-margin-bottom:  0;
 
-// font-size設定
+$position-value: 20;
 
+// font-size設定
 $font-size-base: 10px;
 $font-size: () !default;
 $font-size: map-merge(

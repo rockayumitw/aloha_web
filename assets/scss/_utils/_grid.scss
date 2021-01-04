@@ -44,3 +44,39 @@
       } 
     }
   }
+
+
+  // position
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      // Some special margin utils
+    //   .m#{$infix}-auto { margin: auto !important; }
+      @for $i from 1 through $position-value { 
+          .top#{$infix}-#{$i}{
+              top: $i+px;
+          }
+          .left#{$infix}-#{$i}{
+              left: $i+px;
+          }
+          .right#{$infix}-#{$i}{
+              right: $i+px;
+          }
+          .bottom#{$infix}-#{$i}{
+              bottom: $i+px;
+          }
+          .top-y#{$infix}-#{$i}{
+              top: -$i+px;
+          }
+          .left-y#{$infix}-#{$i}{
+              left: $i+px;
+          }
+          .right-y#{$infix}-#{$i}{
+              right: $i+px;
+          }
+          .bottom-y#{$infix}-#{$i}{
+              bottom: $i+px;
+          }
+        }
+    }
+  } 
